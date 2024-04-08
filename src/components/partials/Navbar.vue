@@ -4,7 +4,6 @@ export default {
   data() {
     return {
       navItems,
-      isHover: false,
     };
   },
   methods: {
@@ -17,17 +16,13 @@ export default {
 
 <template>
   <ul class="d-flex align-items-center">
-    <!-- TODO: fix icons on hover effects -->
     <li
       class="d-flex flex-column align-items-center justify-content-center"
       v-for="item in navItems"
       :key="item.id"
-      @mouseenter="isHover = true"
-      @mouseleave="isHover = false"
     >
       <div class="img_box">
-        <img v-if="!isHover" :src="getImagePath(item.icon)" :alt="item.title" />
-        <img v-else :src="getImagePath(item.icon2)" :alt="item.title" />
+        <img :src="getImagePath(item.icon)" :alt="item.title" />
       </div>
       <a href="#">{{ item.title }}</a>
     </li>
@@ -47,6 +42,11 @@ li {
     cursor: pointer;
     background-color: $color-primary;
     color: $color-white;
+
+    img {
+      filter: brightness(0) saturate(100%) invert(100%) sepia(95%) saturate(22%)
+        hue-rotate(33deg) brightness(105%) contrast(108%);
+    }
   }
 
   .img_box {
