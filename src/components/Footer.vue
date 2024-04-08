@@ -3,7 +3,7 @@ export default {};
 </script>
 
 <template>
-  <header>H</header>
+  <footer>F</footer>
 </template>
 
 <style lang="scss" scoped></style>

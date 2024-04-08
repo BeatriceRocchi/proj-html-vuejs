@@ -1,18 +1,9 @@
 <script>
-import { store } from "../data/store";
-export default {
-  data() {
-    return {
-      store,
-    };
-  },
-};
+export default {};
 </script>
 
 <template>
-  <main>
-    <button @click="store.counter++">Incrementa counter</button>
-  </main>
+  <main>M</main>
 </template>
 
 <style lang="scss" scoped></style>
