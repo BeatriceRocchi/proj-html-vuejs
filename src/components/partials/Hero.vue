@@ -33,6 +33,7 @@ export default {
 
   h3 {
     font-family: "Handlee", cursive;
+    font-weight: normal;
     color: $color-tertiary;
     padding-top: 160px;
   }

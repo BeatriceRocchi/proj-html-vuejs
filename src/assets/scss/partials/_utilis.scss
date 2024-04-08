@@ -1,4 +1,16 @@
+@import "../partials/variables";
+
 .container_custom {
   margin: 0 auto;
-  width: 55%;
+  width: 58%;
+}
+
+.btn_custom {
+  color: $color-white;
+  background-color: transparent;
+  text-transform: uppercase;
+  padding: 10px 5px 10px 20px;
+  border: 2px solid $color-white;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
