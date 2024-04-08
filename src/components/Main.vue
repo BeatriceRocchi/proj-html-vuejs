@@ -1,9 +1,17 @@
 <script>
-export default {};
+import Hero from "./partials/Hero.vue";
+
+export default {
+  components: {
+    Hero,
+  },
+};
 </script>
 
 <template>
-  <main>M</main>
+  <main>
+    <Hero />
+  </main>
 </template>
 
 <style lang="scss" scoped></style>
