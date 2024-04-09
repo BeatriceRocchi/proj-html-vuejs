@@ -8,6 +8,7 @@ import SectionNumbers from "./SectionNumbers.vue";
 import SectionClasses from "./SectionClasses.vue";
 import SectionGoals from "./SectionGoals.vue";
 import SectionStaff from "./SectionStaff.vue";
+import SectionQuote from "./SectionQuote.vue";
 
 export default {
   components: {
@@ -20,6 +21,7 @@ export default {
     SectionClasses,
     SectionGoals,
     SectionStaff,
+    SectionQuote,
   },
 };
 </script>
@@ -42,6 +44,7 @@ export default {
       :CtaButtonText="'View Gallery'"
     />
     <SectionStaff />
+    <SectionQuote />
   </main>
 </template>
 

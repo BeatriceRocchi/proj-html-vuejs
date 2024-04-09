@@ -32,7 +32,7 @@ export default [
     staff: "Angela Lynn",
     role: "Teacher",
     description:
-      "I have completed a Graduate Diploma in Early Childhood Teaching. I have worked with children aged from six weeks to eight years. This is my second year at Fable",
+      "I have completed a Graduate Diploma in Early Childhood Teaching. I have worked with children aged from six weeks to eight years. This is my second year at Fable.",
     contacts: ["youtube", "twitter", "googleplus"],
   },
 ];

@@ -25,13 +25,12 @@ export default {
 
     <!-- Right side -->
     <div class="right_side">
-      <div class="quote_box">
-        <img
-          class="quote_icon"
-          src="../../assets/img/quote.png"
-          alt="Quote icon"
-        />
-      </div>
+      <img
+        class="quote_icon"
+        src="../../assets/img/quote.png"
+        alt="Quote icon"
+      />
+
       <p class="text-start">{{ staffElement.description }}</p>
       <div class="d-flex">
         <div
