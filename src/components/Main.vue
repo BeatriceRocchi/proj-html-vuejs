@@ -5,6 +5,7 @@ import SectionWelcome from "./SectionWelcome.vue";
 import SectionOverview from "./SectionOverview.vue";
 import SectionNumbers from "./SectionNumbers.vue";
 import SectionClasses from "./SectionClasses.vue";
+import SectionGoals from "./SectionGoals.vue";
 
 export default {
   components: {
@@ -14,6 +15,7 @@ export default {
     SectionOverview,
     SectionNumbers,
     SectionClasses,
+    SectionGoals,
   },
 };
 </script>
@@ -26,6 +28,7 @@ export default {
     <SectionOverview class="bg_grey" />
     <SectionNumbers />
     <SectionClasses />
+    <SectionGoals class="bg_grey" />
   </main>
 </template>
 

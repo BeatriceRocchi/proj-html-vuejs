@@ -51,7 +51,6 @@ export default {
 
 h3 {
   width: 50%;
-  color: $color-secondary;
   padding-right: 16px;
 }
 
@@ -59,5 +58,6 @@ p {
   width: 50%;
   padding-left: 16px;
   font-size: 1.1rem;
+  margin-bottom: 60px;
 }
 </style>
