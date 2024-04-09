@@ -21,7 +21,7 @@ export default {
     <div
       class="container container_custom h-100 d-flex flex-column justify-content-between"
     >
-      <div class="d-flex align-items-center">
+      <div class="d-flex">
         <IconItem
           v-for="item in numbersItemList"
           :key="item.id"

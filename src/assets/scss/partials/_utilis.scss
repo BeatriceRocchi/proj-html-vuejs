@@ -19,10 +19,38 @@
 
 .btn_custom {
   color: $color-white;
-  background-color: transparent;
   text-transform: uppercase;
   padding: 10px 5px 10px 20px;
   border: 2px solid $color-white;
   font-weight: 600;
   font-size: 0.9rem;
+
+  &.primary {
+    background-color: $color-primary;
+    border: none;
+
+    &:hover {
+      color: $color-primary;
+      background-color: $color-white;
+
+      img {
+        filter: brightness(0) saturate(100%) invert(45%) sepia(42%)
+          saturate(4097%) hue-rotate(359deg) brightness(102%) contrast(102%);
+      }
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+
+    &:hover {
+      color: $color-secondary;
+      background-color: $color-white;
+
+      img {
+        filter: brightness(0) saturate(100%) invert(31%) sepia(12%)
+          saturate(2989%) hue-rotate(206deg) brightness(97%) contrast(87%);
+      }
+    }
+  }
 }

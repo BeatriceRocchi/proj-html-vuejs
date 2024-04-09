@@ -1,5 +1,16 @@
 <script>
-export default {};
+import CardClass from "./partials/CardClass.vue";
+import classList from "../assets/data/db_sectionClasses.js";
+export default {
+  components: {
+    CardClass,
+  },
+  data() {
+    return {
+      classList,
+    };
+  },
+};
 </script>
 
 <template>
@@ -23,6 +34,13 @@ export default {};
           venenatis. Aenean interdum, nibh vitae sodales, magna ante feugiat
           elit maecenas.
         </p>
+      </div>
+      <div class="row row-cols-2 flex-wrap">
+        <CardClass
+          v-for="item in classList"
+          :key="item.id"
+          :itemElement="item"
+        />
       </div>
     </div>
   </section>

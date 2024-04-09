@@ -23,6 +23,12 @@ h5 {
   margin: 0;
 }
 
+h6 {
+  font-size: 1rem;
+  color: rgba($color-white, 0.6);
+  margin: 0;
+}
+
 p {
   color: darken($color-tertiary, 40%);
   margin: 0;

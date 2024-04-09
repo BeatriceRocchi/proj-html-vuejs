@@ -13,7 +13,7 @@ export default {
       class="container container_custom d-flex justify-content-between align-items-center h-100"
     >
       <h3>How to Enroll Your Child to a Class?</h3>
-      <Btn :textButton="'Learn More'" />
+      <Btn :textButton="'Learn More'" :colorButton="'secondary'" />
     </div>
   </div>
 </template>
