@@ -4,14 +4,14 @@ export default {};
 
 <template>
   <div class="right_side">
-    <div class="carousel_container">
+    <div class="carousel_container w-100">
       <img src="../../assets/img/gallery_01.jpg" alt="Image 1" />
       <div class="arrow_container">
         <img src="../../assets/img/slider_previous.png" alt="Prev" />
         <img src="../../assets/img/slider_next.png" alt="Next" />
       </div>
     </div>
-    <div class="thumbnails_container d-flex justify-content-between">
+    <div class="thumbnails_container w-100 d-flex justify-content-between">
       <img src="../../assets/img/gallery_07.jpg" alt="Image 1" />
       <img src="../../assets/img/gallery_01.jpg" alt="Image 1" />
       <img src="../../assets/img/gallery_08.jpg" alt="Image 1" />
@@ -27,12 +27,10 @@ export default {};
   padding-left: 10px;
 
   .carousel_container {
-    height: 370px;
     position: relative;
 
     img {
       width: 100%;
-      height: 100%;
       object-fit: cover;
     }
 
@@ -55,6 +53,11 @@ export default {};
   .thumbnails_container {
     margin-top: 10px;
     height: 125px;
+
+    img {
+      width: calc(100% / 3.2);
+      object-fit: cover;
+    }
   }
 }
 </style>

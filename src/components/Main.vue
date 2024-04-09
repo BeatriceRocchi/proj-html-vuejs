@@ -4,6 +4,7 @@ import CtaSeparator from "./partials/CtaSeparator.vue";
 import SectionWelcome from "./SectionWelcome.vue";
 import SectionOverview from "./SectionOverview.vue";
 import SectionNumbers from "./SectionNumbers.vue";
+import SectionClasses from "./SectionClasses.vue";
 
 export default {
   components: {
@@ -12,6 +13,7 @@ export default {
     SectionWelcome,
     SectionOverview,
     SectionNumbers,
+    SectionClasses,
   },
 };
 </script>
@@ -23,6 +25,7 @@ export default {
     <SectionWelcome />
     <SectionOverview class="bg_grey" />
     <SectionNumbers />
+    <SectionClasses />
   </main>
 </template>
 

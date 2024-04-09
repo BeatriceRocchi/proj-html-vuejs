@@ -34,8 +34,4 @@ export default {
   </section>
 </template>
 
-<style lang="scss" scoped>
-.header_divider {
-  margin: 30px 0 65px;
-}
-</style>
+<style lang="scss" scoped></style>
