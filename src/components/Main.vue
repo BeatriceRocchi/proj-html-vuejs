@@ -1,6 +1,7 @@
 <script>
 import Hero from "./partials/Hero.vue";
 import CtaSeparator from "./partials/CtaSeparator.vue";
+import Gallery from "./partials/Gallery.vue";
 import SectionWelcome from "./SectionWelcome.vue";
 import SectionOverview from "./SectionOverview.vue";
 import SectionNumbers from "./SectionNumbers.vue";
@@ -11,6 +12,7 @@ export default {
   components: {
     Hero,
     CtaSeparator,
+    Gallery,
     SectionWelcome,
     SectionOverview,
     SectionNumbers,
@@ -29,6 +31,7 @@ export default {
     <SectionNumbers />
     <SectionClasses />
     <SectionGoals class="bg_grey" />
+    <Gallery />
   </main>
 </template>
 
