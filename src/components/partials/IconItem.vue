@@ -2,6 +2,7 @@
 export default {
   props: {
     itemElement: Object,
+    itemType: String,
   },
   methods: {
     getImagePath(img) {
@@ -12,15 +13,27 @@ export default {
 </script>
 
 <template>
-  <div class="d-flex flex-column align-items-center">
+  <div class="d-flex flex-column align-items-center text-center">
     <div
       class="img_box d-flex align-items-center justify-content-center"
-      :class="itemElement.id % 2 === 0 ? 'bg_secondary' : 'bg_primary'"
+      :class="[
+        itemElement.id % 2 === 0 ? 'bg_secondary' : 'bg_primary',
+        itemType === 'border' ? 'white_box' : '',
+      ]"
     >
-      <img :src="getImagePath(itemElement.img)" :alt="itemElement.title" />
+      <img
+        v-if="itemElement.img"
+        :src="getImagePath(itemElement.img)"
+        :alt="itemElement.title"
+      />
+      <div class="number_box" v-else>{{ itemElement.num }}</div>
     </div>
-    <h4>{{ itemElement.title }}</h4>
-    <p>{{ itemElement.description }}</p>
+    <h4 :class="itemType === 'border' ? 'white_text' : ''">
+      {{ itemElement.title }}
+    </h4>
+    <p :class="itemType === 'border' ? 'white_text' : ''">
+      {{ itemElement.description }}
+    </p>
   </div>
 </template>
 
@@ -31,10 +44,16 @@ export default {
   height: 180px;
   width: 180px;
   border-radius: 50%;
+  color: $color-white;
 
   img {
     width: 63px;
   }
+}
+
+.number_box {
+  font-size: 3rem;
+  font-weight: 300;
 }
 
 p {
@@ -47,5 +66,14 @@ p {
 
 .bg_secondary {
   background-color: $color-secondary;
+}
+
+.white_text {
+  color: $color-white;
+}
+
+.white_box {
+  background-color: transparent;
+  border: 2px solid $color-white;
 }
 </style>

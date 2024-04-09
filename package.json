@@ -11,6 +11,7 @@
   "dependencies": {
     "@fontsource-variable/open-sans": "^5.0.28",
     "@fontsource/handlee": "^5.0.18",
+    "@fontsource/lato": "^5.0.20",
     "axios": "^1.6.8",
     "bootstrap": "^5.3.3",
     "vue": "^3.4.21"

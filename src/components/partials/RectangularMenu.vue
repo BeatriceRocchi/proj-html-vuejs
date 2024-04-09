@@ -3,6 +3,7 @@ export default {
   props: {
     itemNum: Number,
     itemSelected: Number,
+    itemColor: String,
   },
 };
 </script>
@@ -12,7 +13,10 @@ export default {
     v-for="n in itemNum"
     :key="n"
     class="rectangle_box"
-    :class="n === itemSelected ? 'rectangle_selected' : ''"
+    :class="[
+      n === itemSelected ? 'rectangle_selected' : '',
+      itemColor === 'white' ? 'white_box' : '',
+    ]"
   ></div>
 </template>
 
@@ -29,5 +33,9 @@ export default {
 .rectangle_selected {
   position: relative;
   bottom: 12px;
+}
+
+.white_box {
+  border-color: $color-white;
 }
 </style>
