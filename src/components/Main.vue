@@ -25,13 +25,20 @@ export default {
 <template>
   <main>
     <Hero />
-    <CtaSeparator />
+    <CtaSeparator
+      :CtaTitle="'How to Enroll Your Child to a Class?'"
+      :CtaButtonText="'Learn more'"
+    />
     <SectionWelcome />
     <SectionOverview class="bg_grey" />
     <SectionNumbers />
     <SectionClasses />
     <SectionGoals class="bg_grey" />
     <Gallery />
+    <CtaSeparator
+      :CtaTitle="'See Our Kindergarten Photo Gallery!'"
+      :CtaButtonText="'View Gallery'"
+    />
   </main>
 </template>
 

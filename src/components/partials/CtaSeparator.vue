@@ -1,6 +1,10 @@
 <script>
 import Btn from "./Btn.vue";
 export default {
+  props: {
+    CtaTitle: String,
+    CtaButtonText: String,
+  },
   components: {
     Btn,
   },
@@ -12,8 +16,8 @@ export default {
     <div
       class="container container_custom d-flex justify-content-between align-items-center h-100"
     >
-      <h3>How to Enroll Your Child to a Class?</h3>
-      <Btn :textButton="'Learn More'" :colorButton="'secondary'" />
+      <h3>{{ CtaTitle }}</h3>
+      <Btn :textButton="CtaButtonText" :colorButton="'secondary'" />
     </div>
   </div>
 </template>
@@ -27,5 +31,12 @@ export default {
   background-image: url(../../assets/img/pattern.png);
   background-repeat: no-repeat;
   background-size: cover;
+
+  h3 {
+    color: $color-white;
+    font-weight: 300;
+    font-size: 2.5rem;
+    margin: 0;
+  }
 }
 </style>
