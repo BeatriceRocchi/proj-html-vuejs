@@ -1,5 +1,10 @@
 <script>
-export default {};
+import Carousel from "./partials/Carousel.vue";
+export default {
+  components: {
+    Carousel,
+  },
+};
 </script>
 
 <template>
@@ -132,7 +137,7 @@ export default {};
       <!-- /Left side -->
 
       <!-- Right side -->
-      <div>Carosello</div>
+      <Carousel />
       <!-- /Right side -->
     </div>
   </section>
@@ -143,6 +148,7 @@ export default {};
 
 .left_side {
   width: 50%;
+  padding-right: 10px;
 }
 
 .nav-pills_custom .nav-link {
@@ -150,6 +156,7 @@ export default {};
   padding: 15px 30px;
   border-radius: 0;
   margin-right: 20px;
+  margin-bottom: 40px;
 }
 
 .nav-pills_custom .nav-link:not(.active) {
