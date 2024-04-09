@@ -1,9 +1,13 @@
 <script>
-export default {};
+export default {
+  props: {
+    staffElement: Object,
+  },
+};
 </script>
 
 <template>
-  <div></div>
+  <div class="col">{{ staffElement.staff }}</div>
 </template>
 
 <style lang="scss" scoped></style>

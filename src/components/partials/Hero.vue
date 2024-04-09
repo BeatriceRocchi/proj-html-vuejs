@@ -25,6 +25,7 @@ export default {
 
 .hero_box {
   height: 600px;
+  width: 100%;
   background-image: url(../../assets/img/hero.jpg);
   // TODO: cercare e cambiare hero img in assets forniti
   background-position: center;

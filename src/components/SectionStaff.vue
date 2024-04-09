@@ -1,13 +1,13 @@
 <script>
-import CardClass from "./partials/CardClass.vue";
-import classList from "../assets/data/db_sectionClasses.js";
+import CardStaff from "./partials/CardStaff.vue";
+import staffList from "../assets/data/db_sectionStaff.js";
 export default {
   components: {
-    CardClass,
+    CardStaff,
   },
   data() {
     return {
-      classList,
+      staffList,
     };
   },
 };
@@ -16,8 +16,8 @@ export default {
 <template>
   <section class="section_custom text-center">
     <div class="container container_custom">
-      <h2>Our Classes</h2>
-      <h5>Our preschool program has fout dedicated classes</h5>
+      <h2>Meet Our Staff</h2>
+      <h5>With education and experience in early childhood care</h5>
       <img
         class="header_divider"
         src="../assets/img/header_divider.png"
@@ -25,8 +25,8 @@ export default {
       />
       <div class="d-flex text-start">
         <h3>
-          We provided four classes with nine to twenty children each aged twelve
-          month to five years of age.
+          Our staff consists of three teachers and one assistant with experience
+          in early childhood care.
         </h3>
         <p>
           Praesent arcu gravida vehicula est node maecenas loareet morbi a dosis
@@ -36,10 +36,10 @@ export default {
         </p>
       </div>
       <div class="row row-cols-2 flex-wrap">
-        <CardClass
-          v-for="item in classList"
-          :key="item.id"
-          :itemElement="item"
+        <CardStaff
+          v-for="staff in staffList"
+          :key="staff.id"
+          :staffElement="staff"
         />
       </div>
     </div>

@@ -7,6 +7,7 @@ import SectionOverview from "./SectionOverview.vue";
 import SectionNumbers from "./SectionNumbers.vue";
 import SectionClasses from "./SectionClasses.vue";
 import SectionGoals from "./SectionGoals.vue";
+import SectionStaff from "./SectionStaff.vue";
 
 export default {
   components: {
@@ -18,6 +19,7 @@ export default {
     SectionNumbers,
     SectionClasses,
     SectionGoals,
+    SectionStaff,
   },
 };
 </script>
@@ -39,6 +41,7 @@ export default {
       :CtaTitle="'See Our Kindergarten Photo Gallery!'"
       :CtaButtonText="'View Gallery'"
     />
+    <SectionStaff />
   </main>
 </template>
 
