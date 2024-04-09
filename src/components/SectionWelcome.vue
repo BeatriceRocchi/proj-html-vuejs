@@ -14,8 +14,8 @@ export default {
 </script>
 
 <template>
-  <div class="container container_custom">
-    <section class="section_custom">
+  <section class="section_custom text-center">
+    <div class="container container_custom">
       <h2>Welcome to Fable</h2>
       <h5>Fable daycare, preschool, and kindergarten</h5>
       <img
@@ -30,8 +30,8 @@ export default {
           :itemElement="item"
         />
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>
