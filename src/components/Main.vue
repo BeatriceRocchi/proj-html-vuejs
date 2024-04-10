@@ -9,6 +9,7 @@ import SectionClasses from "./SectionClasses.vue";
 import SectionGoals from "./SectionGoals.vue";
 import SectionStaff from "./SectionStaff.vue";
 import SectionQuote from "./SectionQuote.vue";
+import SectionNews from "./SectionNews.vue";
 
 export default {
   components: {
@@ -22,6 +23,7 @@ export default {
     SectionGoals,
     SectionStaff,
     SectionQuote,
+    SectionNews,
   },
 };
 </script>
@@ -45,6 +47,7 @@ export default {
     />
     <SectionStaff />
     <SectionQuote />
+    <SectionNews />
   </main>
 </template>
 

@@ -52,6 +52,7 @@ export default {
 .card_class {
   background-color: $color-secondary;
   margin: 10px 0;
+  height: 190px;
 
   .left_side {
     padding: 20px;
