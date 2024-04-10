@@ -10,6 +10,8 @@ import SectionGoals from "./SectionGoals.vue";
 import SectionStaff from "./SectionStaff.vue";
 import SectionQuote from "./SectionQuote.vue";
 import SectionNews from "./SectionNews.vue";
+import Maps from "./partials/Maps.vue";
+import SectionContacts from "./SectionContacts.vue";
 
 export default {
   components: {
@@ -24,6 +26,8 @@ export default {
     SectionStaff,
     SectionQuote,
     SectionNews,
+    Maps,
+    SectionContacts,
   },
 };
 </script>
@@ -48,6 +52,8 @@ export default {
     <SectionStaff />
     <SectionQuote />
     <SectionNews />
+    <Maps />
+    <SectionContacts />
   </main>
 </template>
 
