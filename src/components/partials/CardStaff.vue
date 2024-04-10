@@ -5,10 +5,10 @@ export default {
   },
   methods: {
     getImagePath(img) {
-      return new URL(`../../assets/img/${img}`, import.meta.url).href;
+      return new URL(`../../assets/img/img_staff/${img}`, import.meta.url).href;
     },
     getImagePath2(img) {
-      return new URL(`../../assets/img/${img}.png`, import.meta.url).href;
+      return new URL(`../../assets/img/icons/${img}.png`, import.meta.url).href;
     },
   },
 };

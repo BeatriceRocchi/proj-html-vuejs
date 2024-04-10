@@ -5,7 +5,7 @@ export default {
   },
   methods: {
     getImagePath(img) {
-      return new URL(`../../assets/img/${img}`, import.meta.url).href;
+      return new URL(`../../assets/img/icons/${img}`, import.meta.url).href;
     },
   },
 };

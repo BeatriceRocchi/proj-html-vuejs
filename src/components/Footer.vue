@@ -19,7 +19,7 @@ export default {
   },
   methods: {
     getImagePath2(img) {
-      return new URL(`../assets/img/${img}.png`, import.meta.url).href;
+      return new URL(`../assets/img/icons/${img}.png`, import.meta.url).href;
     },
   },
 };
@@ -30,6 +30,7 @@ export default {
     <div class="upper_footer section_custom">
       <div class="container container_custom">
         <div class="row row-cols-4 g-4">
+          <!-- About us -->
           <div class="col">
             <h5>about us</h5>
             <p>
@@ -42,6 +43,9 @@ export default {
               alt="Fable logo"
             />
           </div>
+          <!-- /About us -->
+
+          <!-- Archives -->
           <div class="col">
             <h5>archives</h5>
             <div
@@ -53,6 +57,9 @@ export default {
               <span> ({{ item.articlesLists.length }})</span>
             </div>
           </div>
+          <!-- /Archives -->
+
+          <!-- Features -->
           <div class="col">
             <h5>our features</h5>
             <p>
@@ -67,13 +74,16 @@ export default {
               >
                 <img
                   class="me-2"
-                  src="../assets/img/style_4_alt.png"
+                  src="../assets/img/icons/style_4_alt.png"
                   alt="Tick icon"
                 />
                 <p class="m-0">{{ item.text }}</p>
               </li>
             </ul>
           </div>
+          <!-- /Features -->
+
+          <!-- Posts -->
           <div class="col">
             <h5>recent posts</h5>
             <CardFooter
@@ -83,6 +93,7 @@ export default {
               :newsElement="item"
             />
           </div>
+          <!-- /Posts -->
         </div>
       </div>
     </div>

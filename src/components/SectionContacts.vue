@@ -45,7 +45,9 @@ export default {
               placeholder="Your Name *"
               required
             />
-            <span><img src="../assets/img/image.png" alt="Image icon" /></span>
+            <span
+              ><img src="../assets/img/icons/image.png" alt="Image icon"
+            /></span>
           </div>
 
           <input

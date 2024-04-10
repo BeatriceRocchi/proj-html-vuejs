@@ -19,7 +19,7 @@ export default {
     <div class="ms-3">
       <h6>{{ newsElement.title }}</h6>
       <div class="d-flex text_box">
-        <img src="../../assets/img/date_footer.png" alt="Calendar icon" />
+        <img src="../../assets/img/icons/date_footer.png" alt="Calendar icon" />
         <div class="date_box">{{ newsElement.date }}</div>
       </div>
     </div>

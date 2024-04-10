@@ -38,7 +38,7 @@ export default {
             >
               <img
                 class="me-2"
-                src="../assets/img/style_1.png"
+                src="../assets/img/icons/style_1.png"
                 alt="Tick icon"
               />
               <p>{{ goal.text }}</p>
