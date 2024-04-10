@@ -28,6 +28,7 @@ export default {
   width: 40px;
   border: 2px solid $color-primary;
   margin: 0 10px 30px 0;
+  z-index: 1000;
 }
 
 .rectangle_selected {
