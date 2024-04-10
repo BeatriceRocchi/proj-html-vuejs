@@ -1,7 +1,7 @@
 @import "../partials/variables";
 
 .container_custom {
-  max-width: 992px;
+  max-width: 1050px;
 }
 
 .section_custom {
@@ -9,11 +9,11 @@
 }
 
 .header_divider {
-  margin: 30px 0 65px;
+  margin-bottom: 65px;
 }
 
 .bg_grey {
-  background-color: $color-tertiary;
+  background-color: lighten($color-tertiary, 5%);
 }
 
 .btn_custom {
@@ -26,7 +26,7 @@
 
   &.primary {
     background-color: $color-primary;
-    border: none;
+    border-color: $color-primary;
 
     &:hover {
       color: $color-primary;
@@ -50,6 +50,51 @@
         filter: brightness(0) saturate(100%) invert(31%) sepia(12%)
           saturate(2989%) hue-rotate(206deg) brightness(97%) contrast(87%);
       }
+    }
+  }
+}
+
+// Margin utilities
+.m {
+  &b {
+    &_15 {
+      margin-bottom: 15px;
+    }
+    &_20 {
+      margin-bottom: 20px;
+    }
+    &_30 {
+      margin-bottom: 30px;
+    }
+    &_40 {
+      margin-bottom: 40px;
+    }
+    &_50 {
+      margin-bottom: 50px;
+    }
+    &_60 {
+      margin-bottom: 60px;
+    }
+  }
+
+  &t {
+    &_15 {
+      margin-top: 15px;
+    }
+    &_20 {
+      margin-top: 20px;
+    }
+    &_30 {
+      margin-top: 30px;
+    }
+    &_40 {
+      margin-top: 40px;
+    }
+    &_50 {
+      margin-top: 50px;
+    }
+    &_60 {
+      margin-top: 60px;
     }
   }
 }

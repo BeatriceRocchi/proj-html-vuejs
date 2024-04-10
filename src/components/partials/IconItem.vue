@@ -6,7 +6,7 @@ export default {
   },
   methods: {
     getImagePath(img) {
-      return new URL(`../../assets/img/${img}`, import.meta.url).href;
+      return new URL(`../../assets/img/icons/${img}`, import.meta.url).href;
     },
   },
 };
@@ -14,6 +14,7 @@ export default {
 
 <template>
   <div class="d-flex flex-column align-items-center text-center">
+    <!-- Upper part: icons -->
     <div
       class="img_box d-flex align-items-center justify-content-center"
       :class="[
@@ -28,12 +29,16 @@ export default {
       />
       <div class="number_box" v-else>{{ itemElement.num }}</div>
     </div>
-    <h4 :class="itemType === 'border' ? 'white_text' : ''">
+    <!-- /Upper part: icons -->
+
+    <!-- Lower part: title and description -->
+    <h4 class="mt_20 mb_20" :class="itemType === 'border' ? 'white_text' : ''">
       {{ itemElement.title }}
     </h4>
     <p :class="itemType === 'border' ? 'white_text' : ''">
       {{ itemElement.description }}
     </p>
+    <!-- /Lower part: title and description -->
   </div>
 </template>
 

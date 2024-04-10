@@ -1,5 +1,6 @@
 <script>
 import navItems from "../../assets/data/db_navbar";
+
 export default {
   data() {
     return {
@@ -8,7 +9,7 @@ export default {
   },
   methods: {
     getImagePath(img) {
-      return new URL(`../../assets/img/${img}`, import.meta.url).href;
+      return new URL(`../../assets/img/icons/${img}`, import.meta.url).href;
     },
   },
 };
@@ -20,8 +21,11 @@ export default {
       class="d-flex flex-column align-items-center justify-content-center"
       v-for="item in navItems"
       :key="item.id"
+      :class="item.id === 101 ? 'active' : ''"
     >
-      <div class="img_box">
+      <!-- Class 'active' on list item is used to view the over effect -->
+
+      <div class="img_box mb_20">
         <img :src="getImagePath(item.icon)" :alt="item.title" />
       </div>
       <a href="#">{{ item.title }}</a>
@@ -33,8 +37,7 @@ export default {
 @import "../../assets/scss/partials/variables";
 
 li {
-  padding: 0 28px;
-  width: 98px;
+  width: 100px;
   height: 100%;
   color: $color-secondary;
 
@@ -48,10 +51,17 @@ li {
         hue-rotate(33deg) brightness(105%) contrast(108%);
     }
   }
+}
 
-  .img_box {
-    height: 32px;
-    margin-bottom: 15px;
+// Class 'active' on list item is used to view the over effect
+.active {
+  cursor: pointer;
+  background-color: $color-primary;
+  color: $color-white;
+
+  img {
+    filter: brightness(0) saturate(100%) invert(100%) sepia(95%) saturate(22%)
+      hue-rotate(33deg) brightness(105%) contrast(108%);
   }
 }
 </style>

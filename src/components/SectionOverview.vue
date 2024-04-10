@@ -14,13 +14,13 @@ export default {
       <div class="left_side">
         <!-- Nav items headers -->
         <ul
-          class="nav nav-pills nav-pills_custom mb-3"
+          class="nav nav-pills nav-pills_custom"
           id="pills-tab"
           role="tablist"
         >
           <li class="nav-item" role="presentation">
             <button
-              class="nav-link active"
+              class="nav-link active mb_40"
               id="pills-overview-tab"
               data-bs-toggle="pill"
               data-bs-target="#pills-overview"
@@ -49,8 +49,9 @@ export default {
         </ul>
         <!-- /Nav items headers -->
 
-        <!-- Nav items contents -->
+        <!-- Nav items contents: title on top and list items with icon and description on bottom -->
         <div class="tab-content" id="pills-tabContent">
+          <!-- First content: overview -->
           <div
             class="tab-pane fade show active"
             id="pills-overview"
@@ -58,20 +59,25 @@ export default {
             aria-labelledby="pills-overview-tab"
             tabindex="0"
           >
-            <h3>
+            <h3 class="mb_40">
               Our philosophy is learning through play as we offer a stimulating
               environment for children.
             </h3>
+
             <ul>
-              <li class="d-flex align-items-center">
+              <li class="d-flex align-items-center mb_30">
                 <div class="img_box">
-                  <img src="../assets/img/clock_alt.png" alt="Clock icon" />
+                  <img
+                    src="../assets/img/icons/clock_alt.png"
+                    alt="Clock icon"
+                  />
                 </div>
+
                 <div>
-                  <h4>Full Day Sessions</h4>
+                  <h4 class="mb_20">Full Day Sessions</h4>
                   <p>
                     Pulvinar est metro ligula blandit maeceas retrum gravida
-                    cuprum. Maecenas node estibulum
+                    cuprum. Maecenas node estibulum.
                   </p>
                 </div>
               </li>
@@ -80,19 +86,24 @@ export default {
                 <div
                   class="img_box d-flex justify-content-center align-items-center"
                 >
-                  <img src="../assets/img/diagram_alt.png" alt="Diagram icon" />
+                  <img
+                    src="../assets/img/icons/diagram_alt.png"
+                    alt="Diagram icon"
+                  />
                 </div>
                 <div>
-                  <h4>Varied Classes</h4>
+                  <h4 class="mb_20">Varied Classes</h4>
                   <p>
                     Pulvinar est metro ligula blandit maeceas retrum gravida
-                    cuprum. Maecenas node estibulum
+                    cuprum. Maecenas node estibulum.
                   </p>
                 </div>
               </li>
             </ul>
           </div>
+          <!-- /First content -->
 
+          <!-- Second content: mission -->
           <div
             class="tab-pane fade"
             id="pills-mission"
@@ -100,17 +111,20 @@ export default {
             aria-labelledby="pills-mission-tab"
             tabindex="0"
           >
-            <h3>Our mission is...</h3>
+            <h3 class="mb_40">Our mission is...</h3>
             <ul>
-              <li class="d-flex align-items-center">
+              <li class="d-flex align-items-center mb_30">
                 <div class="img_box">
-                  <img src="../assets/img/clock_alt.png" alt="Clock icon" />
+                  <img
+                    src="../assets/img/icons/clock_alt.png"
+                    alt="Clock icon"
+                  />
                 </div>
                 <div>
-                  <h4>Full Day Sessions</h4>
+                  <h4 class="mb_20">Full Day Sessions</h4>
                   <p>
                     Pulvinar est metro ligula blandit maeceas retrum gravida
-                    cuprum. Maecenas node estibulum
+                    cuprum. Maecenas node estibulum.
                   </p>
                 </div>
               </li>
@@ -119,18 +133,22 @@ export default {
                 <div
                   class="img_box d-flex justify-content-center align-items-center"
                 >
-                  <img src="../assets/img/diagram_alt.png" alt="Diagram icon" />
+                  <img
+                    src="../assets/img/icons/diagram_alt.png"
+                    alt="Diagram icon"
+                  />
                 </div>
                 <div>
-                  <h4>Varied Classes</h4>
+                  <h4 class="mb_20">Varied Classes</h4>
                   <p>
                     Pulvinar est metro ligula blandit maeceas retrum gravida
-                    cuprum. Maecenas node estibulum
+                    cuprum. Maecenas node estibulum.
                   </p>
                 </div>
               </li>
             </ul>
           </div>
+          <!-- Second content: mission -->
         </div>
         <!-- /Nav items contents -->
       </div>
@@ -148,7 +166,7 @@ export default {
 
 .left_side {
   width: 50%;
-  padding-right: 10px;
+  padding-right: 50px;
 }
 
 .nav-pills_custom .nav-link {
@@ -156,7 +174,7 @@ export default {
   padding: 15px 30px;
   border-radius: 0;
   margin-right: 20px;
-  margin-bottom: 40px;
+  font-size: 1.2rem;
 }
 
 .nav-pills_custom .nav-link:not(.active) {
@@ -196,9 +214,5 @@ export default {
     width: 32px;
     height: 32px;
   }
-}
-
-h3 {
-  color: $color-secondary;
 }
 </style>

@@ -1,21 +1,80 @@
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      counter: 1,
+      imgList: [
+        {
+          title: "Children drawing",
+          url: "gallery_07.jpg",
+        },
+        {
+          title: "Children colouring",
+          url: "gallery_01.jpg",
+        },
+        {
+          title: "Teacher and children",
+          url: "gallery_08.jpg",
+        },
+      ],
+    };
+  },
+  methods: {
+    getImagePath(img) {
+      return new URL(`../../assets/img/slider2/${img}`, import.meta.url).href;
+    },
+
+    goNext(direction) {
+      direction ? this.counter++ : this.counter--;
+
+      if (this.counter < 0) {
+        this.counter = this.imgList.length - 1;
+      } else if (this.counter === this.imgList.length) {
+        this.counter = 0;
+      }
+    },
+  },
+};
 </script>
 
 <template>
   <div class="right_side">
-    <div class="carousel_container w-100">
-      <img src="../../assets/img/gallery_01.jpg" alt="Image 1" />
+    <!-- Carousel container -->
+    <div class="carousel_wrapper w-100">
+      <div class="carousel_item">
+        <img
+          :src="getImagePath(imgList[counter].url)"
+          :alt="imgList[counter].title"
+        />
+      </div>
+
       <div class="arrow_container">
-        <img src="../../assets/img/slider_previous.png" alt="Prev" />
-        <img src="../../assets/img/slider_next.png" alt="Next" />
+        <img
+          @click="goNext(false)"
+          src="../../assets/img/slider2/slider_previous.png"
+          alt="Prev"
+        />
+        <img
+          @click="goNext(true)"
+          src="../../assets/img/slider2/slider_next.png"
+          alt="Next"
+        />
       </div>
     </div>
-    <div class="thumbnails_container w-100 d-flex justify-content-between">
-      <img src="../../assets/img/gallery_07.jpg" alt="Image 1" />
-      <img src="../../assets/img/gallery_01.jpg" alt="Image 1" />
-      <img src="../../assets/img/gallery_08.jpg" alt="Image 1" />
+    <!-- /Carousel container -->
+
+    <!-- Thumbnails container -->
+    <div class="thumbnails_wrapper w-100 d-flex justify-content-between">
+      <img
+        v-for="(img, id) in imgList"
+        :key="id"
+        :src="getImagePath(img.url)"
+        :alt="img.title"
+        :class="counter === id ? 'active' : ''"
+        @click="counter = id"
+      />
     </div>
+    <!-- /Thumbnails container -->
   </div>
 </template>
 
@@ -26,7 +85,7 @@ export default {};
   width: 50%;
   padding-left: 10px;
 
-  .carousel_container {
+  .carousel_wrapper {
     position: relative;
 
     img {
@@ -50,14 +109,19 @@ export default {};
     }
   }
 
-  .thumbnails_container {
+  .thumbnails_wrapper {
     margin-top: 10px;
     height: 125px;
 
     img {
       width: calc(100% / 3.2);
       object-fit: cover;
+      padding-bottom: 10px;
     }
+  }
+
+  .active {
+    border-bottom: 2px solid $color-primary;
   }
 }
 </style>

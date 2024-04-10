@@ -1,5 +1,6 @@
 <script>
 import Navbar from "./partials/Navbar.vue";
+
 export default {
   components: {
     Navbar,
@@ -16,6 +17,8 @@ export default {
 
 <style lang="scss" scoped>
 header {
+  height: 125px;
+
   .logo {
     width: 185px;
   }
