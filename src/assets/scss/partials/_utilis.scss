@@ -26,15 +26,13 @@
 
   &.primary {
     background-color: $color-primary;
-    border-color: $color-primary;
+    border: none;
 
     &:hover {
-      color: $color-primary;
-      background-color: $color-white;
+      background-color: $color-secondary;
 
       img {
-        filter: brightness(0) saturate(100%) invert(45%) sepia(42%)
-          saturate(4097%) hue-rotate(359deg) brightness(102%) contrast(102%);
+        filter: grayscale(0);
       }
     }
   }
