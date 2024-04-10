@@ -17,14 +17,16 @@ export default {
   <section class="section_custom text-center">
     <div class="container container_custom">
       <h2>Our Classes</h2>
-      <h5>Our preschool program has fout dedicated classes</h5>
+      <h5 class="mt_20 mb_30">
+        Our preschool program has fout dedicated classes
+      </h5>
       <img
         class="header_divider"
         src="../assets/img/header_divider.png"
         alt="---"
       />
       <div class="d-flex text-start">
-        <h3>
+        <h3 class="mb_60">
           We provided four classes with nine to twenty children each aged twelve
           month to five years of age.
         </h3>

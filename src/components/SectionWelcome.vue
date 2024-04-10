@@ -19,7 +19,7 @@ export default {
     <div class="container container_custom">
       <!-- Upper section -->
       <h2>Welcome to Fable</h2>
-      <h5 class="mb_30 mt_15">Fable daycare, preschool, and kindergarten</h5>
+      <h5 class="mb_30 mt_20">Fable daycare, preschool, and kindergarten</h5>
 
       <img
         class="header_divider"

@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     getImagePath(img) {
-      return new URL(`../../assets/img/${img}`, import.meta.url).href;
+      return new URL(`../../assets/img/img_class/${img}`, import.meta.url).href;
     },
   },
 };
@@ -18,7 +18,7 @@ export default {
 
 <template>
   <div class="col">
-    <div class="card_class d-flex justify-content-between">
+    <div class="card_class d-flex justify-content-between mb_15 mt_15">
       <div class="left_side text-start">
         <h4>{{ itemElement.title }}</h4>
         <h6>Class name</h6>
@@ -51,7 +51,6 @@ export default {
 
 .card_class {
   background-color: $color-secondary;
-  margin: 10px 0;
   height: 190px;
 
   .left_side {
@@ -61,7 +60,6 @@ export default {
     h4 {
       color: $color-white;
       padding-bottom: 5px;
-      padding-top: 0;
     }
 
     .info_box {
@@ -76,6 +74,7 @@ export default {
 
         h6:first-child {
           color: $color-white;
+          padding-bottom: 5px;
         }
       }
     }
