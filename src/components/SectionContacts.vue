@@ -20,7 +20,7 @@ export default {
   <section class="section_custom text-center">
     <div class="container container_custom">
       <h2>Contact Us</h2>
-      <h5>Our postal address and contact details</h5>
+      <h5 class="mt_20 mb_30">Our postal address and contact details</h5>
       <img
         class="header_divider"
         src="../assets/img/header_divider.png"
@@ -35,9 +35,9 @@ export default {
         />
       </div>
 
-      <form action="#" class="form_custom d-flex my-4">
+      <form action="#" class="form_custom d-flex mt_20">
         <div class="flex-grow-1 h-100 me-4">
-          <div class="d-flex my-4 name_box">
+          <div class="d-flex mt_20 mb_20 name_box">
             <input
               type="text"
               class="form-control"
@@ -50,7 +50,7 @@ export default {
 
           <input
             type="email"
-            class="form-control my-4"
+            class="form-control mt_20 mb_20"
             id="inputEmail"
             placeholder="Your E-mail *"
             required
@@ -62,7 +62,7 @@ export default {
             placeholder="Subject"
           />
         </div>
-        <div class="flex-grow-1 mt-4">
+        <div class="flex-grow-1 mt_20">
           <textarea
             class="form-control h-100"
             placeholder="Your Message *"
@@ -71,7 +71,7 @@ export default {
         </div>
       </form>
       <Btn
-        class="mx-auto"
+        class="mx-auto mt_40"
         type="submit"
         :textButton="'send message'"
         :colorButton="'primary'"

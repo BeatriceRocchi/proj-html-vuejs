@@ -16,15 +16,18 @@ export default {
 <template>
   <section class="section_custom text-center">
     <div class="container container_custom">
+      <!-- Upper section -->
       <h2>Meet Our Staff</h2>
-      <h5>With education and experience in early childhood care</h5>
+      <h5 class="mt_20 mb_30">
+        With education and experience in early childhood care
+      </h5>
       <img
         class="header_divider"
         src="../assets/img/header_divider.png"
         alt="---"
       />
       <div class="d-flex text-start">
-        <h3>
+        <h3 class="mb_60">
           Our staff consists of three teachers and one assistant with experience
           in early childhood care.
         </h3>
@@ -35,6 +38,9 @@ export default {
           elit maecenas.
         </p>
       </div>
+      <!-- /Upper section -->
+
+      <!-- Lower section -->
       <div class="row row-cols-2 flex-wrap">
         <CardStaff
           v-for="staff in staffList"
@@ -42,6 +48,7 @@ export default {
           :staffElement="staff"
         />
       </div>
+      <!-- /Lower section -->
     </div>
   </section>
 </template>
@@ -51,12 +58,12 @@ export default {
 
 h3 {
   width: 50%;
-  padding-right: 16px;
+  padding-right: 25px;
 }
 
 p {
   width: 50%;
-  padding-left: 16px;
+  padding-left: 15px;
   font-size: 1.1rem;
 }
 </style>

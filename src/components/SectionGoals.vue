@@ -10,7 +10,7 @@ export default {
   },
   methods: {
     getImagePath(img) {
-      return new URL(`../assets/img/${img}`, import.meta.url).href;
+      return new URL(`../assets/img/icons/${img}`, import.meta.url).href;
     },
   },
 };
@@ -19,12 +19,13 @@ export default {
   <section class="section_custom">
     <div class="container container_custom">
       <div class="row row-cols-2">
+        <!-- Left side -->
         <div class="col">
           <h3>
             We have been educating children for over fifteen years. Our goal is
             to create a place that engages each child.
           </h3>
-          <p>
+          <p class="mt_40 mb_40">
             Praesent arcu gravida vehicula est node maecenas loareet morbi a
             dosis luctus. Urna eget lacinia eleifend praesent luctus a arcu quis
             facilis venenatis aenean interdum.
@@ -44,6 +45,9 @@ export default {
             </li>
           </ul>
         </div>
+        <!-- /Left side -->
+
+        <!-- Right side -->
         <div class="col d-flex flex-wrap">
           <div
             v-for="item in goalsListVisual"
@@ -55,10 +59,11 @@ export default {
             >
               <img :src="getImagePath(item.img)" :alt="item.title" />
             </div>
-            <h4>{{ item.title }}</h4>
+            <h4 class="mt_20 mb_20">{{ item.title }}</h4>
             <p>{{ item.description }}</p>
           </div>
         </div>
+        <!-- /Right side -->
       </div>
     </div>
   </section>
@@ -66,10 +71,6 @@ export default {
 
 <style lang="scss" scoped>
 @import "../assets/scss/partials/variables";
-
-ul {
-  margin-top: 40px;
-}
 
 .img_box {
   width: 80px;

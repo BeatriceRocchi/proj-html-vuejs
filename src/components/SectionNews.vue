@@ -20,7 +20,7 @@ export default {
   <section class="section_custom text-center">
     <div class="container container_custom">
       <h2>What's New</h2>
-      <h5>Keep up to date with the latest news</h5>
+      <h5 class="mt_20 mb_30">Keep up to date with the latest news</h5>
       <img
         class="header_divider"
         src="../assets/img/header_divider.png"
@@ -30,7 +30,7 @@ export default {
         <CardNews v-for="news in newsList" :key="news.id" :newsElement="news" />
       </div>
       <Btn
-        class="mx-auto mt-4"
+        class="mx-auto mt_40"
         :textButton="'go to blog'"
         :colorButton="'primary'"
       />

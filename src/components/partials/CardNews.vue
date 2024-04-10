@@ -5,7 +5,7 @@ export default {
   },
   methods: {
     getImagePath(img) {
-      return new URL(`../../assets/img/${img}`, import.meta.url).href;
+      return new URL(`../../assets/img/img_news/${img}`, import.meta.url).href;
     },
   },
 };
@@ -24,11 +24,11 @@ export default {
     </p>
     <div class="d-flex lower_card">
       <div class="d-flex align-items-center">
-        <img src="../../assets/img/author.png" alt="Author icon" />
+        <img src="../../assets/img/icons/author.png" alt="Author icon" />
         <p>{{ newsElement.author }}</p>
       </div>
       <div class="d-flex align-items-center">
-        <img src="../../assets/img/category.png" alt="Category icon" />
+        <img src="../../assets/img/icons/category.png" alt="Category icon" />
         <p>{{ newsElement.types.join(", ") }}</p>
       </div>
     </div>

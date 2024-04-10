@@ -16,6 +16,7 @@ export default {
 <template>
   <section class="section_custom text-center">
     <div class="container container_custom">
+      <!-- Upper section -->
       <h2>Our Classes</h2>
       <h5 class="mt_20 mb_30">
         Our preschool program has fout dedicated classes
@@ -37,6 +38,9 @@ export default {
           elit maecenas.
         </p>
       </div>
+      <!-- /Upper section -->
+
+      <!-- Lower section -->
       <div class="row row-cols-2 flex-wrap">
         <CardClass
           v-for="item in classList"
@@ -44,6 +48,7 @@ export default {
           :itemElement="item"
         />
       </div>
+      <!-- /Lower section -->
     </div>
   </section>
 </template>

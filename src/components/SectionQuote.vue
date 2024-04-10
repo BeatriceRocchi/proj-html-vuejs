@@ -54,6 +54,8 @@ export default {
 
   h3 {
     color: $color-white;
+    text-align: center;
+    font-size: 2.5rem;
     font-weight: 300;
     padding: 20px 0;
     margin-bottom: 0;
