@@ -1,6 +1,7 @@
 <script>
 import { archivesList } from "../assets/data/db_footer.js";
 import { featuresList } from "../assets/data/db_footer.js";
+import { socialLists } from "../assets/data/db_footer.js";
 import newsList from "../assets/data/db_sectionNews.js";
 import CardFooter from "./partials/CardFooter.vue";
 
@@ -12,8 +13,14 @@ export default {
     return {
       archivesList,
       featuresList,
+      socialLists,
       newsList,
     };
+  },
+  methods: {
+    getImagePath2(img) {
+      return new URL(`../assets/img/${img}.png`, import.meta.url).href;
+    },
   },
 };
 </script>
@@ -78,8 +85,20 @@ export default {
           </div>
         </div>
       </div>
-
-      <div>Lower Footer</div>
+    </div>
+    <div class="lower_footer">
+      <ul class="d-flex justify-content-center">
+        <li
+          class="square_box d-flex align-items-center justify-content-center"
+          v-for="(item, id) in socialLists"
+          :key="id"
+        >
+          <a href="#"><img :src="getImagePath2(item)" :alt="item" /></a>
+        </li>
+      </ul>
+      <p class="text-center">
+        © Fable - Children Kindergarten Wordpress Theme by QuanticalLabs
+      </p>
     </div>
   </footer>
 </template>
@@ -121,6 +140,21 @@ export default {
     padding: 10px;
     margin-bottom: 5px;
     border: 1px solid rgba($color-white, 50%);
+  }
+}
+
+.lower_footer {
+  padding: 30px 0;
+
+  .square_box {
+    background-color: $color-primary;
+    width: 40px;
+    aspect-ratio: 1;
+    margin: 0px 2px 30px;
+  }
+
+  p {
+    font-size: 0.8rem;
   }
 }
 </style>

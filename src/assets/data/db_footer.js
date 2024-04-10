@@ -46,4 +46,6 @@ const featuresList = [
   },
 ];
 
-export { archivesList, featuresList };
+const socialLists = ["behance", "dribble", "envato", "facebook", "twitter"];
+
+export { archivesList, featuresList, socialLists };
