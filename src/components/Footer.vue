@@ -21,6 +21,11 @@ export default {
     getImagePath2(img) {
       return new URL(`../assets/img/icons/${img}.png`, import.meta.url).href;
     },
+
+    scrollTop() {
+      document.documentElement.scrollTo({ top: 0, behavior: "smooth" }); //For Chrome, FireFox and IE
+      document.body.scrollTo({ top: 0, behavior: "smooth" }); //For Safari
+    },
   },
 };
 </script>
@@ -97,6 +102,7 @@ export default {
         </div>
       </div>
     </div>
+
     <div class="lower_footer">
       <ul class="d-flex justify-content-center">
         <li
@@ -110,6 +116,11 @@ export default {
       <p class="text-center">
         © Fable - Children Kindergarten Wordpress Theme by QuanticalLabs
       </p>
+
+      <!-- Button scroll -->
+      <div @click="scrollTop()" class="btn_scroll">
+        <img src="../assets/img/slider_previous.png" alt="Scroll up icon" />
+      </div>
     </div>
   </footer>
 </template>
@@ -156,16 +167,43 @@ export default {
 
 .lower_footer {
   padding: 30px 0;
+  position: relative;
 
   .square_box {
     background-color: $color-primary;
     width: 40px;
     aspect-ratio: 1;
     margin: 0px 2px 30px;
+
+    &:hover {
+      background-color: $color-secondary;
+    }
   }
 
   p {
     font-size: 0.8rem;
+  }
+
+  .btn_scroll {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background-color: darken($color-tertiary, 20%);
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover {
+      cursor: pointer;
+      background-color: darken($color-tertiary, 40%);
+    }
+
+    img {
+      transform: rotate(90deg);
+    }
   }
 }
 </style>

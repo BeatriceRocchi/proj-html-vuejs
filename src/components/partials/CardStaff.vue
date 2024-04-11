@@ -27,8 +27,10 @@ export default {
         />
       </div>
 
-      <div class="staff mt_20">{{ staffElement.staff }}</div>
-      <div class="role">{{ staffElement.role }}</div>
+      <div class="staff_info">
+        <div class="staff">{{ staffElement.staff }}</div>
+        <div class="role">{{ staffElement.role }}</div>
+      </div>
     </div>
     <!-- /Left side -->
 
@@ -66,14 +68,28 @@ export default {
 }
 
 .left_side {
+  &:hover {
+    .img_box {
+      height: 235px;
+      transition: 0.5s;
+
+      .hover_img {
+        opacity: 1;
+        transition: 0.5s;
+      }
+    }
+
+    .staff_info {
+      background-color: lighten($color-tertiary, 5%);
+      padding-bottom: 10px;
+      transition: 0.5s;
+    }
+  }
+
   .img_box {
     width: 245px;
     height: 245px;
     position: relative;
-
-    &:hover .hover_img {
-      display: block;
-    }
 
     img {
       width: 100%;
@@ -82,7 +98,7 @@ export default {
     }
 
     .hover_img {
-      display: none;
+      opacity: 0;
       position: absolute;
       left: 50%;
       top: 50%;
@@ -95,13 +111,16 @@ export default {
     }
   }
 
-  .staff {
-    color: $color-secondary;
-  }
+  .staff_info {
+    padding-top: 10px;
+    .staff {
+      color: $color-secondary;
+    }
 
-  .role {
-    color: darken($color-tertiary, 20%);
-    font-size: 0.9rem;
+    .role {
+      color: darken($color-tertiary, 20%);
+      font-size: 0.9rem;
+    }
   }
 }
 

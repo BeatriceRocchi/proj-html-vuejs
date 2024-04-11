@@ -219,7 +219,7 @@ export default {
     }
 
     &#id0_img2 {
-      left: 75%;
+      left: 70%;
       top: 50%;
       transform: translate(-50%, -50%);
     }

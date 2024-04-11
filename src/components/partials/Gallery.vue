@@ -65,7 +65,8 @@ export default {};
     position: relative;
 
     &:hover .hover_img {
-      display: block;
+      opacity: 1;
+      transition: 0.5s;
     }
 
     img {
@@ -75,7 +76,7 @@ export default {};
     }
 
     .hover_img {
-      display: none;
+      opacity: 0;
       position: absolute;
       left: 50%;
       top: 50%;

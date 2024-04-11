@@ -105,6 +105,11 @@ export default {
         height: 40px;
         width: 40px;
         background-color: $color-primary;
+
+        &:hover {
+          cursor: pointer;
+          background-color: $color-secondary;
+        }
       }
     }
   }
